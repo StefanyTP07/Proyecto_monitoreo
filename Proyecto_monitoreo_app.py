@@ -15,12 +15,12 @@ data=pd.read_csv('data.csv', sep=',', nrows=1000000, parse_dates=['Fecha', 'Long
 st.dataframe(data.head(20))
 
 @st.experimental_memo
-def download_data():
+def download2_data():
   url = "https://drive.google.com/uc?id=1vyN3cnVUN1aUbx_w_r3AiLXRtY4puhty"
   output = 'data2.csv'
   gdown.download(url,output, quiet= False)
 
-download_data()
+download2_data()
 st.title('Monitoreo Bonilla')
 st.write('Tabla:')
 data=pd.read_csv('data2.csv', sep=',', nrows=1000000, parse_dates=['Fecha', 'Longitud'])
