@@ -4,7 +4,7 @@ import gdown
 
 @st.experimental_memo
 def download_data():
-  url = 'https://drive.google.com/uc?id=1tReqZLXKH569JkzNQ7cc8kTFA11UdN6qI2PgvDvE6zs'
+  url = "https://drive.google.com/uc?id=17B8hm_07RhiLpL0GPhuvEQumycgzowez"
   output = 'data.csv'
   gdown.download(url,output, quiet= False)
 
