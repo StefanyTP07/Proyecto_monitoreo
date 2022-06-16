@@ -33,8 +33,8 @@ import plotly.express as px
 import plotly.figure_factory as ff
 import scipy
 
-df_bonilla = pd.read_excel(r'data.csv', header= 0) 
-df_miraflores= pd.read_excel(r'data2.csv', header= 0) 
+df_bonilla = pd.read_excel(r'https://drive.google.com/uc?id=17B8hm_07RhiLpL0GPhuvEQumycgzowez', header= 0) 
+df_miraflores= pd.read_excel(r'https://drive.google.com/uc?id=1vyN3cnVUN1aUbx_w_r3AiLXRtY4puhty', header= 0) 
 
 st.title("Análisis Bonilla")
 st.header("Tabla de datos")
