@@ -62,7 +62,8 @@ st.title("Comparaciones de valores entre Bonilla y Miraflores")
 st.header("Histogramas")
 
 for i in range(6,15):
-    fig = ff.create_distplot([df_bonilla.iloc[:, i].values.tolist(),df_miraflores.iloc[:, i].values.tolist()], [df_bonilla.columns[i],df_miraflores.columns[i]])
+    fig = ff.create_distplot(
+         [df_bonilla.iloc[:, i].values.tolist(),df_miraflores.iloc[:, i].values.tolist()], [df_bonilla.columns[i],df_miraflores.columns[i]])
     st.plotly_chart(fig, use_container_width=True)
 st.header("Gráficas")
 
