@@ -9,5 +9,5 @@ def download_data():
   gdown.download(url,output, quiet= False)
 
 download_data()
-data=pd.read_csv('data.csv', sep=';', nrows=1000000, parse_dates=['Fecha', 'Longitud'])
+data=pd.read_csv('data.csv', sep=',', nrows=1000000, parse_dates=['Fecha', 'Longitud'])
 st.dataframe(data.head(20))
