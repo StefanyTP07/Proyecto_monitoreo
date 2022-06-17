@@ -1,31 +1,10 @@
-import streamlit as st
-import pandas as pd
-import gdown
+# app.py, run with 'streamlit run app.py'
 
-@st.experimental_memo
-def download_data():
-  url = "https://drive.google.com/uc?id=1vyN3cnVUN1aUbx_w_r3AiLXRtY4puhty"
-  output = 'data.csv'
-  gdown.download(url,output, quiet= False)
-
-download_data()
-#st.title('Monitoreo Miraflores')
-#st.write('Tabla:')
-#data=pd.read_csv('data.csv', sep=',', nrows=1000000, parse_dates=['Fecha', 'Longitud'])
-#st.dataframe(data.head(20))
-
-@st.experimental_memo
-def download2_data():
-  url = "https://drive.google.com/uc?id=17B8hm_07RhiLpL0GPhuvEQumycgzowez"
-  output = 'data2.csv'
-  gdown.download(url,output, quiet= False)
-
-download2_data()
-#st.title('Monitoreo Bonilla')
-#st.write('Tabla:')
-#data=pd.read_csv('data2.csv', sep=',', nrows=1000000, parse_dates=['Fecha', 'Longitud'])
-#st.dataframe(data.head(20))
-
+#import pip
+#pip.main(["install", "openpyxl"])
+#pip.main(["install", "pandas"])
+#import plotly.figure_factory as ff
+#pip.main(["install", "matplotlib"])
 import matplotlib.pyplot as plt
 import pandas as pd
 import streamlit as st
@@ -33,8 +12,8 @@ import plotly.express as px
 import plotly.figure_factory as ff
 import scipy
 
-df_bonilla = pd.read_csv(r'data.csv', sep=',', nrows=1000000, parse_dates=['Fecha', 'Longitud'], header= 0) 
-df_miraflores= pd.read_csv(r'data2.csv', sep=',', nrows=1000000, parse_dates=['Fecha', 'Longitud'], header= 0) 
+df_bonilla = pd.read_excel(r'https://www.datosabiertos.gob.pe/sites/default/files/Monitoreo_setiembre_Bonilla.xlsx', header= 0) 
+df_miraflores= pd.read_excel(r'https://www.datosabiertos.gob.pe/sites/default/files/Monitoreo_setiembre_Ov.Miraflores.xlsx', header= 0) 
 
 st.title("Análisis Bonilla")
 st.header("Tabla de datos")
