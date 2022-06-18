@@ -1,10 +1,10 @@
-# app.py, run with 'streamlit run app.py'
+#app.py, run with 'streamlit run app.py'
 
-#import pip
-#pip.main(["install", "openpyxl"])
-#pip.main(["install", "pandas"])
-#import plotly.figure_factory as ff
-#pip.main(["install", "matplotlib"])
+import pip
+pip.main(["install", "openpyxl"])
+pip.main(["install", "pandas"])
+import plotly.figure_factory as ff
+pip.main(["install", "matplotlib"])
 import matplotlib.pyplot as plt
 import pandas as pd
 import streamlit as st
