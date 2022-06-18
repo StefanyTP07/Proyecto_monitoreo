@@ -18,6 +18,7 @@ df_miraflores= pd.read_excel(r'https://www.datosabiertos.gob.pe/sites/default/fi
 st.title("Análisis Bonilla")
 st.header("Tabla de datos")
 st.write(df_bonilla)
+st.header("Concentraciones de contaminantes")
 for i in range(6,15):
     fig = px.histogram(df_bonilla, df_bonilla.columns[i])
     st.plotly_chart(fig, use_container_width=True)
@@ -25,7 +26,7 @@ for i in range(6,15):
 st.title("Análisis Miraflores")
 st.header("Tabla de datos")
 st.write(df_miraflores)
-st.header("Concentraciones de CO")
+st.header("Concentraciones de contaminantes")
 for i in range(6,15):
     fig = px.histogram(df_miraflores, df_miraflores.columns[i])
     st.plotly_chart(fig, use_container_width=True)
