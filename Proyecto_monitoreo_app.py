@@ -40,7 +40,7 @@ for i in range(6,15):
     fig = px.histogram(df_miraflores, df_miraflores.columns[i])
     st.plotly_chart(fig, use_container_width=True)
 
-limites_maximos=[1500,1500,1500,1500,150,15,1500,1500,1500]
+limites_maximos=[1200,150,200,50,150,45,250,70,3]
 dictionary_names=dict()
 for j in range(6,15):
     dictionary_names[df_bonilla.columns[j]]=df_bonilla.columns[j]+" Bonilla"
