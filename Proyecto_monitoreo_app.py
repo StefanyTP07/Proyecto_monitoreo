@@ -24,7 +24,7 @@ st.write("-Alvaro Ivan Alarcon Guizado")
 st.header("Contexto")
 st.write("“Saber la calidad de aire que se respira en un determinado lugar es importante para los ciudadanos que habitan en ella”. Por ello, en esta página se presenta un análisis estadístico de contaminantes presente en la Municipalidad de Miraflores-Lima(Perú). La base de datos fue proporcionada por la municipalidad mencionada, de esta manera se escogió los datos de monitoreo del Complejo Deportivo Bonilla y Ovalo Miraflores, los datos de estos dos lugares de monitoreo corresponden al mes de septiembre del 2020. Esta presentación incluye cuatro partes: Gráfica de datos de los respectivos contaminantes en Bonilla y Ov.Miraflores, gráficas comparativas entre ambos lugares y por último comparaciones de sus Límites Máximos Permisibles.")
 
-st.title("Análisis Bonilla")
+st.title("Análisis en Bonilla")
 st.header("Tabla de datos:")
 st.write(df_bonilla)
 st.header("Histogramas de las concentraciones de contaminantes:")
@@ -32,7 +32,7 @@ for i in range(6,15):
     fig = px.histogram(df_bonilla, df_bonilla.columns[i])
     st.plotly_chart(fig, use_container_width=True)
 
-st.title("Análisis Ov. Miraflores")
+st.title("Análisis en Ov. Miraflores")
 st.header("Tabla de datos:")
 st.write(df_miraflores)
 st.header("Histogramas de las concentraciones de contaminantes:")
