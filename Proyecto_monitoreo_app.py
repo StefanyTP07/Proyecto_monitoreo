@@ -32,10 +32,10 @@ for i in range(6,15):
     fig = px.histogram(df_bonilla, df_bonilla.columns[i])
     st.plotly_chart(fig, use_container_width=True)
 
-st.title("Análisis Miraflores")
+st.title("Análisis Ov. Miraflores")
 st.header("Tabla de datos")
 st.write(df_miraflores)
-st.header("Histogramas de la concentracion de contaminantes:")
+st.header("Histogramas de las concentraciones de contaminantes:")
 for i in range(6,15):
     fig = px.histogram(df_miraflores, df_miraflores.columns[i])
     st.plotly_chart(fig, use_container_width=True)
@@ -45,17 +45,17 @@ dictionary_names=dict()
 for j in range(6,15):
     dictionary_names[df_bonilla.columns[j]]=df_bonilla.columns[j]+" Bonilla"
 df_bonilla.rename(columns = dictionary_names, inplace=True)
-df_miraflores.columns=(df_miraflores.columns+" Miraflores").values.tolist()
+df_miraflores.columns=(df_miraflores.columns+" Ov. Miraflores").values.tolist()
 
 
-st.title("Comparaciones de valores entre Bonilla y Miraflores")
-st.header("Histogramas")
+st.title("Comparaciones de los valores de contaminantes entre Bonilla y Ov. Miraflores")
+st.header("Histogramas comparativos:")
 
 for i in range(6,15):
     fig = ff.create_distplot(
          [df_bonilla.iloc[:, i].values.tolist(),df_miraflores.iloc[:, i].values.tolist()], [df_bonilla.columns[i],df_miraflores.columns[i]])
     st.plotly_chart(fig, use_container_width=True)
-st.header("Gráficas")
+st.header("Gráficas comprativas de los Límites máximos permisibles:")
 
 for i in range(6,15):
     df_concat=[]
