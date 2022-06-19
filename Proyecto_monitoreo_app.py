@@ -25,7 +25,7 @@ st.header("Contexto")
 st.write("“Saber la calidad de aire que se respira en un determinado lugar es importante para los ciudadanos que habitan en ella”. Por ello, en esta página se presenta un análisis estadístico de contaminantes presente en la Municipalidad de Miraflores-Lima(Perú). La base de datos fue proporcionada por la municipalidad mencionada, de esta manera se escogió los datos de monitoreo del Complejo Deportivo Bonilla y Ovalo Miraflores, los datos de estos dos lugares de monitoreo corresponden al mes de septiembre del 2020. Esta presentación incluye cuatro partes: Gráfica de datos de los respectivos contaminantes en Bonilla y Ov.Miraflores, gráficas comparativas entre ambos lugares y por último comparaciones de sus Límites Máximos Permisibles.")
 
 st.title("Análisis Bonilla")
-st.header("Tabla de datos")
+st.header("Tabla de datos:")
 st.write(df_bonilla)
 st.header("Histogramas de las concentraciones de contaminantes:")
 for i in range(6,15):
@@ -33,14 +33,14 @@ for i in range(6,15):
     st.plotly_chart(fig, use_container_width=True)
 
 st.title("Análisis Ov. Miraflores")
-st.header("Tabla de datos")
+st.header("Tabla de datos:")
 st.write(df_miraflores)
 st.header("Histogramas de las concentraciones de contaminantes:")
 for i in range(6,15):
     fig = px.histogram(df_miraflores, df_miraflores.columns[i])
     st.plotly_chart(fig, use_container_width=True)
 
-limites_maximos=[1500,1500,1500,1500,1500,1500,1500,1500,1500]
+limites_maximos=[1500,1500,1500,1500,150,15,1500,1500,1500]
 dictionary_names=dict()
 for j in range(6,15):
     dictionary_names[df_bonilla.columns[j]]=df_bonilla.columns[j]+" Bonilla"
@@ -55,7 +55,7 @@ for i in range(6,15):
     fig = ff.create_distplot(
          [df_bonilla.iloc[:, i].values.tolist(),df_miraflores.iloc[:, i].values.tolist()], [df_bonilla.columns[i],df_miraflores.columns[i]])
     st.plotly_chart(fig, use_container_width=True)
-st.header("Gráficas comprativas de los Límites máximos permisibles:")
+st.header("Gráficas comparativas de los Límites máximos permisibles:")
 
 for i in range(6,15):
     df_concat=[]
