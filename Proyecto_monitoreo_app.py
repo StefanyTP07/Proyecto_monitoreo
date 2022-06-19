@@ -18,7 +18,7 @@ df_miraflores= pd.read_excel(r'https://www.datosabiertos.gob.pe/sites/default/fi
 st.title("Análisis Bonilla")
 st.header("Tabla de datos")
 st.write(df_bonilla)
-st.header("Histogramas de la concentracion de contaminantes:")
+st.header("Histogramas de las concentraciones de contaminantes:")
 for i in range(6,15):
     fig = px.histogram(df_bonilla, df_bonilla.columns[i])
     st.plotly_chart(fig, use_container_width=True)
