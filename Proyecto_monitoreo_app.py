@@ -22,7 +22,8 @@ st.write("-Gianina Berduzco Ancco")
 st.write("-Teyzon Florida Serrepe")
 st.write("-Alvaro Ivan Alarcon Guizado")
 st.header("Contexto")
-st.write("“Saber la calidad de aire que se respira en un determinado lugar es importante para los ciudadanos que habitan en ella”. Por ello, en esta página se presenta un análisis estadístico de contaminantes presente en la Municipalidad de Miraflores-Lima(Perú). La base de datos fue proporcionada por la municipalidad mencionada, de esta manera se escogió los datos de monitoreo del Complejo Deportivo Bonilla y Ovalo Miraflores, los datos de estos dos lugares de monitoreo corresponden al mes de septiembre del 2020. Esta presentación incluye cuatro partes: Gráfica de datos de los respectivos contaminantes en Bonilla, Gráfica de monitoreo de contaminantes en O.Miraflores, Gráficas comparativas entre ambos lugares y por último gráfica de monitoreo contaminantes y los Límites Máximos Permisibles de estos.")
+st.write("“Saber la calidad de aire que se respira en un determinado lugar es importante para los ciudadanos que habitan en ella”. Por ello, en esta página se presenta un análisis estadístico de contaminantes presente en la Municipalidad de Miraflores-Lima(Perú). La base de datos fue proporcionada por la municipalidad mencionada, de esta manera se escogió los datos de monitoreo del Complejo Deportivo Bonilla y Ovalo Miraflores, los datos de estos dos lugares de monitoreo corresponden al mes de septiembre del 2020. Esta presentación incluye cuatro partes: Gráfica de datos de los respectivos contaminantes en Bonilla, Gráfica de monitoreo de contaminantes en Ov.Miraflores, gráficas comparativas entre ambos lugares y por último gráfica de monitoreo contaminantes y los Límites Máximos Permisibles de estos.
+")
 
 st.title("Análisis Bonilla")
 st.header("Tabla de datos")
